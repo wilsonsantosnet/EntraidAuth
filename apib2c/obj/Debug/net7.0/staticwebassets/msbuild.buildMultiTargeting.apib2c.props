@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\apib2c.props" />
+</Project>

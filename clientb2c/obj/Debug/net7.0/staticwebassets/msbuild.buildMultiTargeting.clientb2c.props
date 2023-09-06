@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\clientb2c.props" />
+</Project>
