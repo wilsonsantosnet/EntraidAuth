@@ -26,7 +26,7 @@ public class HomeController : Controller
     {
         
         var accessToken = await _tokenAcquisition.GetAccessTokenForUserAsync(new string[] { "https://seedazb2c.onmicrosoft.com/e9e529e1-e85a-4bf2-8676-62c2075bc786/access.all" });
-        var responseA = await BackAD(accessToken, "http://localhost:7283");
+        var responseA = await BackAD(accessToken, "https://localhost:7283");
         
         ViewData["Name"] = User.Identity.Name;
         var gn = User.Claims.Where(_=>_.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname").FirstOrDefault();
