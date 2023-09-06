@@ -7,13 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-        .AddMicrosoftIdentityWebApi(options =>
-{
-    builder.Configuration.Bind("AzureAdB2C", options);
-    options.TokenValidationParameters.NameClaimType = "name";
-},
-options => { builder.Configuration.Bind("AzureAdB2C", options); });
+                .AddMicrosoftIdentityWebApi(builder.Configuration, "AzureAdB2C");
 
 
 
